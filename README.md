@@ -1,4 +1,4 @@
-<<<<<<< HEAD
-=======
+# MERCADO-LIVRE-CODE
+Projeto de clone de uma plataforma de E-commerce.
 
->>>>>>> d69187ace2d3bfe8bb7391696528682a67bde8f8
+**- *"SHORTLY... PROJECT IN PROGRESS..."*  -**
