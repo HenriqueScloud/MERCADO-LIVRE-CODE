@@ -26,12 +26,7 @@ function Header() {
               {cartList.reduce((total, album) => total + album.qtd, 0)}
             </span>
           </button>
-          <button
-            className="header__theme-btn"
-            onClick={() => {
-              setTheme(!Theme);
-            }}
-          ></button>
+          
           <button
             className="header__carrinho-btn"
             onClick={() => setOnMenu(!OnMenu)}
