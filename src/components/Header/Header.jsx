@@ -3,9 +3,11 @@ import { TodoContext } from "../../providers/TodoContext";
 import { MdShoppingCart } from "react-icons/md";
 // import { fetchAlbuns } from "../../dataBase/api";
 import "./index.scss";
+import { FaBars } from "react-icons/fa";
 
 function Header() {
-  const { Theme, setTheme,setOnMenu,OnMenu, setOnModal, cartList } = useContext(TodoContext);
+  const { Theme, setTheme, setOnMenu, OnMenu, setOnModal, cartList } =
+    useContext(TodoContext);
 
   return (
     <header className="header">
@@ -16,12 +18,6 @@ function Header() {
         </h1>
         <ul>
           <button
-            className="header__theme-btn"
-            onClick={() => {
-              setTheme(!Theme);
-            }}
-          ></button>
-          <button
             onClick={() => setOnModal(true)}
             className="header__carrinho-btn"
           >
@@ -30,8 +26,17 @@ function Header() {
               {cartList.reduce((total, album) => total + album.qtd, 0)}
             </span>
           </button>
-          <button onClick={()=>setOnMenu(!OnMenu)}>
-            <p className="destacar" >MENU</p>
+          <button
+            className="header__theme-btn"
+            onClick={() => {
+              setTheme(!Theme);
+            }}
+          ></button>
+          <button
+            className="header__carrinho-btn"
+            onClick={() => setOnMenu(!OnMenu)}
+          >
+            <FaBars />
           </button>
         </ul>
       </nav>
