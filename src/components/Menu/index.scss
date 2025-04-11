@@ -1,0 +1,19 @@
+.menu{
+  background-color: var(--brand-2);
+  color: var(--gray-3);
+  text-decoration: none;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  width: 30vw;
+  max-width: 300px;
+  height: 100vh;
+
+  a{
+    color: var(--gray-1);
+    text-decoration: none;
+  }
+
+}
