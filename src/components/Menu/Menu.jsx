@@ -5,10 +5,10 @@ export const Menu = () => {
   const { OnMenu, setOnMenu, OnModal, setOnModal } = useContext(TodoContext);
   return (
     <nav className="menu">
-      <button onClick={() => setOnMenu(!OnMenu)}>x</button>
-      <ul>
+      <div onClick={() => setOnMenu(!OnMenu)}/>
+      <ul className="menu-ul">
         <li>
-          <a href="/">loja</a>
+          <a href="/">Loja</a>
         </li>
         <li>
           <a href="/about">Sobre</a>
@@ -17,7 +17,7 @@ export const Menu = () => {
           <a href="/contats">Contatos</a>
         </li>
         <li onClick={()=>setOnModal(!OnModal)}>
-          carrinho
+          Carrinho
         </li>
       </ul>
     </nav>
