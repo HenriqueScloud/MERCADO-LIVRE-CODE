@@ -4,6 +4,7 @@
   max-width: 64rem;
   margin: 0 auto;
   padding: 0 .625rem;
+  
 
 }
 
@@ -17,8 +18,10 @@
 
 .filtros__genres {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 1.5625rem;
+  overflow-y: hidden;
+  
 }
 
 .filtro__genre-btn:hover {
