@@ -3,7 +3,7 @@ import { createContext, useState } from "react";
 export const TodoContext = createContext({});
 export const TodoProvider = ({ children }) => {
   const [Theme, setTheme] = useState(false);
-  const [OnMenu, setOnMenu] = useState(true);
+  const [OnMenu, setOnMenu] = useState(false);
   const [cartList, setCartList] = useState([]);
 
   const [OnModal, setOnModal] = useState(false);
