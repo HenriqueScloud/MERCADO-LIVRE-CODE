@@ -3,7 +3,7 @@ import { fetchAlbuns } from "../../dataBase/api";
 import { Cards } from "./Cards/Cards";
 import "./index.scss"
 
-function Albuns() {
+export function Albuns() {
 
 
   return (
