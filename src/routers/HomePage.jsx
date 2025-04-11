@@ -1,21 +1,17 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Store } from "../pages/Store/Store";
+import { About } from "../pages/About/About";
+import { Contats } from "../pages/Contats/Contats";
 
-import Header from "../components/Header/Header";
-import Main from "../components/Main/Main";
-import { useContext } from "react";
-import { TodoContext } from "../providers/TodoContext";
-export function HomePage(){
-  const { Theme } = useContext(TodoContext);
-  const html = document.querySelector("html");
-
-  Theme == false
-    ? html.classList.add("darkMode")
-    : html.classList.remove("darkMode");
-
+export const HomePages = () => {
   return (
-    <main>
-      <Header />
-      <Main />
-    </main>
+    <BrowserRouter>
+      <Routes>
+        {/* <Route path="/inicio" element={<Store />} /> PROJETAR UM INICIO  */}
+        <Route path="/" element={<Store/>} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contats" element={<Contats />} />
+      </Routes>
+    </BrowserRouter>
   );
-
 }
