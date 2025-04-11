@@ -1,11 +1,11 @@
 import { useContext } from "react";
 import { TodoContext } from "../../providers/TodoContext";
 import { MdShoppingCart } from "react-icons/md";
-import { fetchAlbuns } from "../../dataBase/api";
+// import { fetchAlbuns } from "../../dataBase/api";
 import "./index.scss";
 
 function Header() {
-  const { Theme, setTheme, setOnModal, cartList } = useContext(TodoContext);
+  const { Theme, setTheme,setOnMenu,OnMenu, setOnModal, cartList } = useContext(TodoContext);
 
   return (
     <header className="header">
@@ -30,8 +30,8 @@ function Header() {
               {cartList.reduce((total, album) => total + album.qtd, 0)}
             </span>
           </button>
-          <button>
-            <p className="destacar">MENU</p>
+          <button onClick={()=>setOnMenu(!OnMenu)}>
+            <p className="destacar" >MENU</p>
           </button>
         </ul>
       </nav>
