@@ -51,6 +51,8 @@ export const CartModal = () => {
             </span>
           </div>
           <button onClick={() => setCartList([])}>Remover todos</button>
+          <button onClick={() => console.table(cartList)
+          }>Comprar</button>
         </footer>
       </section>
     </div>
