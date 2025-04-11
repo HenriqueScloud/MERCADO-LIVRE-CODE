@@ -1,6 +1,8 @@
 .cardModal_Container {
   width: 100vw;
   height: 100vh;
+  z-index: 3;
+
   background-color: rgba(54, 53, 53, 0.448);
   position: fixed;
   top: 0;
@@ -8,14 +10,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 .cardModal {
   border: none;
   margin-inline: 1rem;
 
-  max-width: 600px;
-  min-width: 410px; //nao mudar o tamalho min. fazer mobile first !!
+  max-width: 70vw;
+  min-width: 50vh; //nao mudar o tamalho min. fazer mobile first !!
   border-radius: 8px;
   background-color: var(--gray-8);
   .modal_header {
