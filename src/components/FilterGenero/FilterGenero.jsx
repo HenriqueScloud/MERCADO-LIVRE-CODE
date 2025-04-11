@@ -1,6 +1,6 @@
 import "./index.scss";
 
-function FiltroGenero() {
+export function FiltroGenero() {
   return (
     <section className="filtro__genre-section">
       <h1 className="filtro__genre-title">Gênero Musical</h1>
