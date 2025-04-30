@@ -1,0 +1,25 @@
+.theme_btn {
+  border-radius: var(--border-radio);
+  background-image: url("../../../assets/icons/btn-moon.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 2.75rem;
+  height: 2.25rem;
+  border: none;
+  cursor: pointer;
+  background-color: var(--gray-5);
+  padding: 0.5625rem 0.875rem;
+}
+
+.theme_btn_dark {
+  background-image: url("../../../assets/icons/btn-sun.png");
+  background-color: var(--gray-6);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 2.75rem;
+  height: 2.25rem;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--border-radio);
+  padding: 0.5625rem 0.875rem;
+}
