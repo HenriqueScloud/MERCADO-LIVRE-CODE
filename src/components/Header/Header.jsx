@@ -1,13 +1,11 @@
-import { useContext } from "react";
-import { TodoContext } from "../../providers/TodoContext";
-import { MdShoppingCart } from "react-icons/md";
-// import { fetchAlbuns } from "../../dataBase/api";
 import "./index.scss";
-import { FaBars } from "react-icons/fa";
+import { BtnCarrinho } from "../Buttons/BtnCarrinho/BtnCarrinho";
+import { BtnTheme } from "../Buttons/BtnTheme/BtnTheme";
+import { BtnMenu } from "../Buttons/BtnMenu/BtnMenu";
 
 function Header() {
-  const { Theme, setTheme, setOnMenu, OnMenu, setOnModal, cartList } =
-    useContext(TodoContext);
+  let Janela = window.innerWidth;
+  console.log(Janela);
 
   return (
     <header className="header">
@@ -17,22 +15,10 @@ function Header() {
           <p className="destacar">Story</p>
         </h1>
         <ul>
-          <button
-            onClick={() => setOnModal(true)}
-            className="header__carrinho-btn"
-          >
-            <MdShoppingCart size={21} />
-            <span>
-              {cartList.reduce((total, album) => total + album.qtd, 0)}
-            </span>
-          </button>
-          
-          <button
-            className="header__carrinho-btn"
-            onClick={() => setOnMenu(!OnMenu)}
-          >
-            <FaBars />
-          </button>
+          {Janela > 425 ? <BtnTheme /> : null}
+          {Janela > 425 ? <BtnCarrinho /> : null}
+
+          <BtnMenu />
         </ul>
       </nav>
     </header>
