@@ -2,28 +2,24 @@ import { useContext } from "react";
 import { TodoContext } from "../../providers/TodoContext";
 import "../Menu/index.scss";
 import { Link } from "react-router-dom";
+import { BtnCarrinho } from "../Buttons/BtnCarrinho/BtnCarrinho";
+import { BtnTheme } from "../Buttons/BtnTheme/BtnTheme";
 export const Menu = () => {
-  const { OnMenu, setOnMenu, OnModal, setOnModal,setTheme, Theme } = useContext(TodoContext);
+  const { OnMenu, setOnMenu } = useContext(TodoContext);
   return (
     <nav className="menu">
       <div onClick={() => setOnMenu(!OnMenu)} />
       <ul className="menu-ul">
-        
         <li>
-          <a href="/about">Sobre</a>
+          <a href="/">loja</a>
         </li>
         <li>
-          <a href="/">Contatos</a>
+          <a href="/contats">Contatos</a>
         </li>
-        <li onClick={() => setOnModal(!OnModal)}>Carrinho</li>
-        <button
-          className="header__theme-btn"
-          onClick={() => {
-            setTheme(!Theme);
-          }}
-        ></button>
+        <Link to={"/about"}>sobre</Link>
 
-        <Link to={"/about"} >sobre</Link>
+        <BtnCarrinho />
+        <BtnTheme />
       </ul>
     </nav>
   );
