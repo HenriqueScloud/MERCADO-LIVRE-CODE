@@ -10,14 +10,9 @@ export const Menu = () => {
     <nav className="menu">
       <div onClick={() => setOnMenu(!OnMenu)} />
       <ul className="menu-ul">
-        <li>
-          <a href="/">loja</a>
-        </li>
-        <li>
-          <a href="/contats">Contatos</a>
-        </li>
+        <Link to={"/"}>Loja</Link>
         <Link to={"/about"}>sobre</Link>
-
+        <Link to={"/contats"}>Contatos</Link>
         <BtnCarrinho />
         <BtnTheme />
       </ul>

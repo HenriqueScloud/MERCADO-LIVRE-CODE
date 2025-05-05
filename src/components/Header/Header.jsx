@@ -5,7 +5,6 @@ import { BtnMenu } from "../Buttons/BtnMenu/BtnMenu";
 
 function Header() {
   let Janela = window.innerWidth;
-  console.log(Janela);
 
   return (
     <header className="header">

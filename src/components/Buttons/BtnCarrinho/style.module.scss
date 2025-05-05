@@ -7,19 +7,20 @@
   height: 2.25rem;
   border: none;
   cursor: pointer;
-  background-color: var(--gray-5);
+  background-color: var(--gray-8);
+  color: var(--gray-2);
   padding: 0.5625rem 0.875rem;
   span{
-    border: 2.5px solid var(--gray-5);
+    border: 2.5px solid var(--gray-8);
     position: relative;
     top: -45px;
-    right: -15px;
+    right: -10px;
     font-size: 1rem;
     background-color: var(--brand-2);
-    padding-inline:10px ;
-    padding-block: 5px;
-    height: 20px;
+    padding-inline:6px ;
+    padding-block: 2.5px;
+    height: 10px;
     border-radius: 50%;
-    color: var(--gray-1);
+    color: var(--gray-2);
   }
 }
